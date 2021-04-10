@@ -1,0 +1,81 @@
+﻿@model Minibus_Hire_System.web.Models.Home.ContactViewModel
+@{ 
+    Layout = "_IndexLayout";
+}
+<style>
+    body, html {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    .bg {
+        /* The image used */ background-image: url("/Images/WebImages/map.PNG"); /* Full height */
+        height: 100%; /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .contact-container {
+        margin-top: 100px;
+    }
+
+    .card-img {
+        height: 250px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 50px;
+    }
+</style>
+
+<div class="bg"></div>
+<div class="contact-container container">
+
+
+    <div class="col-sm-12">
+        <div class="card h-100">
+            <a href="#"><img class="card-img card-img-top" src="~/Images/WebImages/Contact.jpg" alt=""></a>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <form asp-action="Contact" asp-controller="Home">
+                            <div class="row">
+                                <div class="col-sm-6 text-right"><label asp-for="FirstName"></label></div>
+                                <div class="col-sm-6"><input asp-for="FirstName" /></div>
+                                <div class="col-sm-12"><span asp-validation-for="FirstName"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 text-right"><label asp-for="LastName"></label></div>
+                                <div class="col-sm-6"><input asp-for="LastName" /></div>
+                                <div class="col-sm-12"><span asp-validation-for="LastName"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 text-right"><label asp-for="Email"></label></div>
+                                <div class="col-sm-6"><input asp-for="Email" /></div>
+                                <div class="col-sm-12"><span asp-validation-for="Email"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 text-right"><label asp-for="Message"></label></div>
+                                <div class="col-sm-6"><textarea asp-for="Message"></textarea></div>
+                                <div class="col-sm-12"><span asp-validation-for="Message"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 text-right">
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-md-6 card-footer">
+                        This box is for address and contact number
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

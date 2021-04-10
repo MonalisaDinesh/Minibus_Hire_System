@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Minibus_Hire_System.web.Models.Home.VehicleViewModel>
+@{
+}
+
+<div class="container" style="margin-top:100px;">
+    <div class="row">
+        @foreach (var vehicle in Model)
+        {
+            <div class="col-sm-12 col-md-3">
+                <div class="card">
+                    <img src="@($"/Images/WebImages/{vehicle.imageName}")" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">@vehicle.Name</h5>
+                        <p class="card-text">@vehicle.ShortDescr</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Styles {
+<style>
+    body {
+        background-color:#000;
+    }
+</style>
+}
