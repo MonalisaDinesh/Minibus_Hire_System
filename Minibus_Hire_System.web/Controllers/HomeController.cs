@@ -49,19 +49,19 @@ namespace Minibus_Hire_System.web.Controllers
         public IActionResult Vehicle()
         {
             IList<VehicleViewModel> model = new List<VehicleViewModel>();
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
-            model.Add(new VehicleViewModel { Name = "Jayan", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
+            model.Add(new VehicleViewModel { Name = "Mona", ShortDescr = "Testing", imageName = "Minibus-Gallery-3.jpg" });
             return View(model.AsEnumerable());
         }
 
