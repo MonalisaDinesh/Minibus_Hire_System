@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Minibus_Hire_System.Interfaces;
 using Minibus_Hire_System.web.Models.SignIn;
 using System;
@@ -17,20 +18,32 @@ namespace Minibus_Hire_System.web.Controllers
             userService = _userService;
         }
         public IActionResult Index()
-        {
+        {            
             return View();
         }
 
-        public IActionResult Registration()
+        //public IActionResult Registration()
+        //{
+        //    return View();
+        //}
+
+        [HttpPost]
+        public bool Signin(SignInViewModel model)// string email, string password)
         {
-            return View();
+            if (string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
+                return false;
+
+            ///TODO::need to check the credential in database
+
+            return true;
         }
 
         [HttpPost]
         public IActionResult Registration(RegistrationViewModel model)
         {
-            if(!ModelState.IsValid)
-                return View(model);
+            if (!ModelState.IsValid)
+                return RedirectToAction(nameof(Index));
+                //return View(model);
 
             var result = userService.AddUser(new Object.UserObject
             {
@@ -50,6 +63,17 @@ namespace Minibus_Hire_System.web.Controllers
                 return View();
             else
                 return View(model);
+        }
+        
+        public IList<string> ValidateRegistration(RegistrationViewModel model)
+        {
+            IList<string> validation = new List<string>();
+            if (string.IsNullOrWhiteSpace(model.FirstName))
+                validation.Add("First Name is required");
+            if (string.IsNullOrWhiteSpace(model.LastName))
+                validation.Add("Last Name is required");
+
+            return validation;
         }
     }
 }
